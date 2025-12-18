@@ -7,58 +7,51 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="loading-state">
-    <div class="scroll-progress-container">
-        <svg id="scroll-svg">
-            <path id="scroll-path" />
-        </svg>
-    </div>
-    <div id="loader-wrapper">
-        <div class="loader-track">
-            <div class="loader-bar"></div>
+<body class="page-loading">
+    <div id="loading-screen">
+        <div class="loading-bar-background">
+            <div class="moving-bar"></div>
         </div>
     </div>
 
-    <div class="container content-hidden">
+    <div class="main-container invisible">
         <nav>
             <div class="logo">Srujan.Portfolio</div>
             
-            <div class="nav-right">
-                <div class="nav-links">
+            <div class="menu-area">
+                <div class="menu-links">
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                 </div>
                 
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <button id="dark-mode-button" class="icon-button" aria-label="Toggle Theme">
                     <i class="ph ph-moon"></i>
                 </button>
 
-                <div class="mobile-menu-icon">
+                <div class="hamburger-menu">
                     <i class="ph ph-list"></i>
                 </div>
             </div>
         </nav>
 
-        <section class="hero hidden">
+        <section class="welcome-section fade-in-element">
             <h1>Writing code. Breaking things. <br> Learning why.</h1>
             <p>I'm a First-Year CS Student exploring the world of algorithms, web development, and software engineering.</p>
-            <div class="cta-group">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            <div class="button-group">
+                <a href="#projects" class="button button-filled">View Projects</a>
+                <a href="#contact" class="button button-outline">Get in Touch</a>
             </div>
         </section>
 
-        <section id="about" class="hidden">
-            <div class="section-header">
+        <section id="about" class="fade-in-element">
+            <div class="title-area">
                 <h2>About Me</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="about-wrapper">
+                <div class="bio-text">
                     <p>
                         Hello! I'm Srujan, currently pursuing my B.Tech in Computer Science. 
                         . My 
@@ -72,136 +65,131 @@
             </div>
         </section>
 
-        <section id="skills" class="hidden">
-            <div class="section-header">
-                <h2>Technical Skills</h2>
+        <section id="skills" class="fade-in-element">
+            <div class="title-area">
+                <h2>Learning</h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="ph ph-code skill-icon"></i>
-                    <span class="skill-name">Python</span>
+            <div class="skills-list">
+                <div class="skill-box">
+                    <i class="ph ph-code tech-icon"></i>
+                    <span class="tech-name">Python</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-coffee skill-icon"></i>
-                    <span class="skill-name">Java</span>
+                <div class="skill-box">
+                    <i class="ph ph-coffee tech-icon"></i>
+                    <span class="tech-name">Java</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-browsers skill-icon"></i>
-                    <span class="skill-name">HTML & CSS</span>
+                <div class="skill-box">
+                    <i class="ph ph-browsers tech-icon"></i>
+                    <span class="tech-name">HTML & CSS</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-lightning skill-icon"></i>
-                    <span class="skill-name">JavaScript</span>
+                <div class="skill-box">
+                    <i class="ph ph-lightning tech-icon"></i>
+                    <span class="tech-name">JavaScript</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-hard-drives skill-icon"></i>
-                    <span class="skill-name">Node.js</span>
+                <div class="skill-box">
+                    <i class="ph ph-hard-drives tech-icon"></i>
+                    <span class="tech-name">Node.js</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-arrows-left-right skill-icon"></i>
-                    <span class="skill-name">Express.js</span>
+                <div class="skill-box">
+                    <i class="ph ph-arrows-left-right tech-icon"></i>
+                    <span class="tech-name">Express.js</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-database skill-icon"></i>
-                    <span class="skill-name">SQLite</span>
+                <div class="skill-box">
+                    <i class="ph ph-database tech-icon"></i>
+                    <span class="tech-name">SQLite</span>
                 </div>
-                <div class="skill-card">
-                    <i class="ph ph-git-branch skill-icon"></i>
-                    <span class="skill-name">Git & GitHub</span>
+                <div class="skill-box">
+                    <i class="ph ph-git-branch tech-icon"></i>
+                    <span class="tech-name">Git & GitHub</span>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="hidden">
-            <div class="section-header">
+        <section id="projects" class="fade-in-element">
+            <div class="title-area">
                 <h2>Selected Projects</h2>
             </div>
-            <div class="projects-grid">
+            <div class="work-list">
                 
-                <div class="project-card">
+                <div class="work-box">
                     <div>
-                        <h3 class="project-title">Multiplayer Game Backend</h3>
-                        <p class="project-desc">A scalable REST API for a multiplayer card game.</p>
-                        <div class="tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Prisma</span>
-                            <span class="tag">SQLite</span>
+                        <h3 class="work-title">Multiplayer Game Backend</h3>
+                        <p class="work-description">REST API for a multiplayer card game.</p>
+                        <div class="tech-tags">
+                            <span class="label">Node.js</span>
+                            <span class="label">Express</span>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srujan-29007/raja-mantri-chor-sipahi" class="link-text">View Code <i class="ph ph-arrow-right"></i></a>
+                    <div class="work-links">
+                        <a href="https://github.com/srujan-29007/raja-mantri-chor-sipahi" class="link-label">View Code <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="work-box">
                     <div>
-                        <h3 class="project-title">Conway's Game of Life</h3>
-                        <p class="project-desc">Interactive simulation of cellular automata algorithms showing emergent biological patterns.</p>
-                        <div class="tags">
-                            <span class="tag">Algorithms</span>
-                            <span class="tag">HTML5 Canvas</span>
-                            <span class="tag">Math</span>
+                        <h3 class="work-title">Conway's Game of Life</h3>
+                        <p class="work-description">Interactive simulation</p>
+                        <div class="tech-tags">
+                            <span class="label">HTML Canvas</span>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/Gameoflife" class="link-text">Play Simulation <i class="ph ph-arrow-right"></i></a>
+                    <div class="work-links">
+                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/Gameoflife" class="link-label">View Code<i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="work-box">
                     <div>
-                        <h3 class="project-title">Minimalist Portfolio</h3>
-                        <p class="project-desc">Personal interface.</p>
-                        <div class="tags">
-                            <span class="tag">Frontend</span>
-                            <span class="tag">UI/UX</span>
-                            <span class="tag">CSS3</span>
+                        <h3 class="work-title">Minimalist Portfolio</h3>
+                        <p class="work-description">Personal interface.</p>
+                        <div class="tech-tags">
+                            <span class="label">HTML</span>
+                            <span class="label">CSS</span>
+                            <span class="label">JS</span>                             
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srujan-29007/portfolio" class="link-text">Live Demo <i class="ph ph-arrow-right"></i></a>
+                    <div class="work-links">
+                        <a href="https://srujan-29007.github.io/portfolio" class="link-label">View <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="work-box">
                     <div>
-                        <h3 class="project-title">Tech News Scraper</h3>
-                        <p class="project-desc">Automated data mining bot that extracts and structures real-time data from web sources.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Web Scraping</span>
-                            <span class="tag">BeautifulSoup</span>
+                        <h3 class="work-title">Tech News Scraper</h3>
+                        <p class="work-description">Automated data mining bot that extracts and structures real-time data from web sources.</p>
+                        <div class="tech-tags">
+                            <span class="label">Python</span>
+                            <span class="label">BeautifulSoup</span>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/Scraper" class="link-text">View Code <i class="ph ph-arrow-right"></i></a>
+                    <div class="work-links">
+                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/Scraper" class="link-label">View Code <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="work-box">
                     <div>
-                        <h3 class="project-title">Desktop Organizer</h3>
-                        <p class="project-desc">System utility script that automates OS-level file management and directory organization.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Scripting</span>
+                        <h3 class="work-title">Desktop Organizer</h3>
+                        <p class="work-description">System utility script that automates OS-level file management and directory organization.</p>
+                        <div class="tech-tags">
+                            <span class="label">Python</span>
+                            <span class="label">Automation</span>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/organizer" class="link-text">View Code <i class="ph ph-arrow-right"></i></a>
+                    <div class="work-links">
+                        <a href="https://github.com/srujan-29007/mini-projects/tree/master/organizer" class="link-label">View Code <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section id="contact" class="hidden">
-            <div class="section-header">
+        <section id="contact" class="fade-in-element">
+            <div class="title-area">
                 <h2>Let's Connect</h2>
             </div>
-            <div class="contact-container">
-                <div class="social-links">
+            <div class="contact-area">
+                <div class="profile-links">
                     <a href="https://github.com/srujan-29007" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
                     <a href="mailto:anrasrte@gmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
                 </div>
