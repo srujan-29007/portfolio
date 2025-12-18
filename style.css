@@ -402,21 +402,3 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    .menu-links { display: none; }
-    .hamburger-menu { display: block; }
-    
-    .welcome-section h1 { font-size: 2.8rem; }
-    .welcome-section p { font-size: 1.15rem; }
-    
-    .about-wrapper { 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 40px 24px;
-        gap: 32px;
-    }
-    
-    .title-area { margin-bottom: 40px; }
-    section { padding: 80px 0; }
-}
-
